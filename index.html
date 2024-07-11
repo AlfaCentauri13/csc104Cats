@@ -4,84 +4,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css" type="text/css">
   <title>Meow</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #ff6347;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2em;
-      color: #4682b4;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    img {
-      width: 50%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-    }
-
-    #cat-caption {
-      margin-top: 10px;
-      font-style: italic;
-      color: #777;
-    }
-
-    @media (max-width: 768px) {
-      img {
-        width: 80%;
-      }
-
-      h1 {
-        font-size: 2.5em;
-      }
-
-      h2 {
-        font-size: 1.8em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-    }
-  </style>
 </head>
 
 <body>
+  <!-- Header and Intro -->
   <h1 id="title">MEOW</h1>
-  <p>Welcome to my cat database.</p>
+
+  <div class="intro">
+    <p>Welcome to my cat database.</p>
+    <p>Here you can find information about all the cats I know.</p>
+    <p>This page is updated whenever I can get to it.</p>
+  </div>
 
   <!-- cats -->
-  <h2 id="cat-title">A Cute Cat</h2>
+  <h2 id="cat-title">Orange Tabby</h2>
   <img src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg"
     alt="A cute cat">
   <p id="cat-caption">This is a cute cat displaying teeth.</p>
 
-  <h2 id="cat-title">Another Cute Cat</h2>
+  <h2 id="cat-title">Domestic Shorthair Kitten (Tabby)</h2>
   <img
     src="https://www.pasadenastarnews.com/wp-content/uploads/2023/06/PAS-L-COL-PHS-0624-01-1.jpg?fit=620%2C9999px&ssl=1"
     alt="A cute cat">
   <p id="cat-caption">This is another cat (I have no idea what breed this one is) </p>
+
+  <!-- footer -->
+  <footer>
+    <p id="pfooter">This page was created by a college student. Images are not mine.</p>
+  </footer>
 </body>
+
+<script>
+// tbd
+</script>
 
 </html>
