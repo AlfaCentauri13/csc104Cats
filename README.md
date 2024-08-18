@@ -9,3 +9,6 @@ orangetabby.html - info page on the Orange Tabby
 persianlonghair.html - info page on the Persian Longhair
 domesticshorthair.html - info page on the Domestic Shorthair
 style.css - CSS style for the whole site
+
+THE IMAGES IN THIS SITE ARE NOT MINE AND THIS SITE WILL NOT BE PUBLISHED TO THE WEB!!
+THIS IS A PROJECT SITE FOR COLLEGE!!
