@@ -166,7 +166,6 @@
     transform: translateX(0);
   }
 
-  /* Optional: Adjust this for different sliding directions */
   .slide-in-right {
     transform: translateX(100%);
   }
@@ -175,30 +174,24 @@
     transform: translateX(0);
   }
 
-  /* Cats Wrapper Styling */
   .cats-wrapper {
     margin: 0 auto;
-    /* Center the wrapper */
     width: 100%;
     max-width: 800px;
-    /* Matching width with intro */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
   }
 
-  /* Heading Styling inside Cats Wrapper */
   .cats-wrapper h2 {
     font-size: 1.8em;
     color: #4682b4;
   }
 
-  /* Image Styling inside Cats Wrapper */
   .cats-wrapper img {
     width: 100%;
     max-width: 500px;
-    /* Smaller max width for images */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
