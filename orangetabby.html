@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Classic Orange Tabby</title>
+</head>
+
+<body>
+  <!-- Go Back Button -->
+  <a href="index.html" class="go-back">Go Back</a>
+
+  <!-- Detailed Information -->
+  <h1>Classic Orange Tabby</h1>
+
+  <!-- Scrollable Images Section -->
+  <div class="scrollable-images slide-in">
+    <img src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg"
+      alt="Orange Tabby Cat">
+    <img src="https://cats.com/wp-content/uploads/2018/08/orange-tabby.jpg" alt="Orange Tabby Cat - Image 2">
+    <img src="https://cats.com/wp-content/uploads/2019/12/ProTrackTor.Wessie.jpg" alt="Orange Tabby Cat - Image 3">
+    <img src="https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg" alt="Orange Tabby Cat - Image 4">
+  </div>
+
+  <!-- Fun Facts -->
+  <div class="fun-facts slide-in">
+    <strong>
+      <h2>Fun Facts about Orange Tabby Cats</h2>
+      <ul>
+        <li>Orange Tabby cats are not a specific breed but rather a color pattern found in many breeds.</li>
+        <li>They are known for their friendly and affectionate nature, which is why they are a very popular breed of
+          cat.
+        </li>
+        <li>Their distinctive orange color is due to a genetic variation affecting pigmentation.</li>
+        <li>Many Orange Tabby cats have a distinctive "M" shape on their foreheads!</li>
+        <li>Classic Orange Tabby cats have bold swirling patterns on their backs like marbling in a cake.</li>
+        <li>They also have a random series of dark and light swirls like a bullseye.</li>
+      </ul>
+    </strong>
+  </div>
+
+
+  <!-- General Facts -->
+  <div class="general-facts slide-in">
+    <h2>General Facts about Classic Orange Tabby Cats</h2>
+    <dl>
+      <dt>Lifespan:</dt>
+      <dd>12-15 years</dd>
+      <dt>Diet:</dt>
+      <dd>High-quality cat food with a balanced diet of proteins, fats, and carbohydrates.</dd>
+      <dt>Behavior:</dt>
+      <dd>Playful, social, and affectionate. They often enjoy interacting with people and other pets.</dd>
+    </dl>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="pfooter"> This page was created by a college student. Images are not mine. This will also not be a published
+      site! </p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all elements with the class 'slide-in'
+      const slideInElements = document.querySelectorAll('.slide-in');
+
+      // Function to add 'show' class
+      const showElements = () => {
+        slideInElements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            element.classList.add('show');
+          }
+        });
+      };
+
+      // Call the function on page load
+      showElements();
+
+      // Call the function on scroll
+      window.addEventListener('scroll', showElements);
+    });
+  </script>
+</body>
+
+</html>

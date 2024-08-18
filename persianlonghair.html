@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Persian Longhair</title>
+</head>
+
+<body>
+  <!-- Go Back Button -->
+  <a href="index.html" class="go-back">Go Back</a>
+
+  <!-- Detailed Information -->
+  <h1>Persian Longhair</h1>
+
+  <!-- Scrollable Images Section -->
+  <div class="scrollable-images slide-in">
+    <img
+      src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcT_5BaekDocJRBYqFvm-4MD4WdzudwUNtUR9uU18wXhYOSD0BES5usmZBkW5mtZOKJf"
+      alt="Persian Longhair Cat">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-0uMWxvW99DfI607vDlqGHpxI7K753HV6KqTz7FdnBT0cieh2"
+      alt="Persian Longhair Cat - Image 2">
+    <img src="https://www.purina-arabia.com/sites/default/files/2021-02/CAT%20HERO_0017_Persian.jpg"
+      alt="Persian Longhair Cat - Image 3">
+    <img src="https://cdn.britannica.com/48/7148-004-6C88ACBC/Persian-cream-bicolour.jpg"
+      alt="Persian Longhair Cat - Image 4">
+  </div>
+
+  <!-- Fun Facts -->
+  <div class="fun-facts slide-in">
+    <strong>
+      <h2>Fun Facts about Persian Longhair Cats</h2>
+      <ul>
+        <li>Persians are a bit of a mysterious breed.</li>
+        <li>They are among the first pedigreed cat breeds and were part of the first cat show in the world!
+        </li>
+        <li>They are perfect lap cats and come in many different colors.</li>
+        <li>The Himalayan and Exotic Shorthair are considered variants of the Persian Longhair breed.</li>
+        <li>Persian Longhairs are known for their luxurious, long fur and distinctive flat face.</li>
+        <li>They have a calm and gentle demeanor, making them excellent indoor companions.</li>
+        <li>Their coat requires regular grooming to prevent tangles and mats.</li>
+        <li>They have a history of being favored by royalty and are often depicted in art and literature.</li>
+      </ul>
+    </strong>
+  </div>
+
+  <!-- General Facts -->
+  <div class="general-facts slide-in">
+    <h2>General Facts about Persian Longhair Cats</h2>
+    <dl>
+      <dt>Lifespan:</dt>
+      <dd>12-17 years</dd>
+      <dt>Diet:</dt>
+      <dd>High-quality cat food with a focus on protein and moisture to support their long fur and overall health.</dd>
+      <dt>Behavior:</dt>
+      <dd>
+        Calm and affectionate, often forming strong bonds with their owners. They tend to be laid-back and enjoy
+        lounging in comfortable spots. Due to their long fur, they require regular grooming to prevent matting and
+        maintain their coat. Generally good with children and other pets but may prefer a quieter environment.
+      </dd>
+    </dl>
+  </div>
+  <!-- Footer -->
+
+  <footer>
+    <p id="pfooter"> This page was created by a college student. Images are not mine. This will also not be a published
+      site! </p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all elements with the class 'slide-in'
+      const slideInElements = document.querySelectorAll('.slide-in');
+
+      // Function to add 'show' class
+      const showElements = () => {
+        slideInElements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            element.classList.add('show');
+          }
+        });
+      };
+
+      // Call the function on page load
+      showElements();
+
+      // Call the function on scroll
+      window.addEventListener('scroll', showElements);
+    });
+  </script>
+</body>
+
+</html>

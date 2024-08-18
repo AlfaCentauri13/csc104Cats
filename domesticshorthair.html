@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Domestic Shorthair</title>
+</head>
+
+<body>
+  <!-- Go Back Button -->
+  <a href="index.html" class="go-back">Go Back</a>
+
+  <!-- Detailed Information -->
+  <h1>Domestic Shorthair</h1>
+
+  <!-- Scrollable Images Section -->
+  <div class="scrollable-images slide-in">
+    <img
+      src="https://www.pasadenastarnews.com/wp-content/uploads/2023/06/PAS-L-COL-PHS-0624-01-1.jpg?fit=620%2C9999px&ssl=1"
+      alt="Domestic Shorthair Cat">
+    <img src="https://www.lifetimepetcover.co.uk/assets/uploads/european_shorthair_6722645_1920_min.jpg"
+      alt="Domestic Shorthair Cat - Image 2">
+    <img
+      src="https://d3544la1u8djza.cloudfront.net/APHI/Blog/2022/02-11/gray+stripe+domestic+shortahair+tabby+cat+resting+in+a+maroon+cat+tree+bed-min.jpg"
+      alt="Domestic Shorthair Cat - Image 3">
+    <img
+      src="https://d3544la1u8djza.cloudfront.net/APHI/Blog/2022/02-11/domestic+shorthair+tabby+cat+hiding+behind+a+cat+tower-min.jpg"
+      alt="Domestic Shorthair Cat - Image 4">
+  </div>
+
+  <!-- Fun Facts -->
+  <div class="fun-facts slide-in">
+    <strong>
+      <h2>Fun Facts about Domestic Shorthair Cats</h2>
+      <ul>
+        <li>Domestic Shorthairs come in a wide variety of colors and patterns, making them one of the most diverse cat
+          breeds.</li>
+        <li>They are known for their easy-going nature and adaptability to different environments.</li>
+        <li>Many Domestic Shorthairs are highly intelligent and can be trained to perform tricks or use a litter box.
+        </li>
+        <li>They are often good with children and other pets, making them great family companions.</li>
+      </ul>
+    </strong>
+  </div>
+
+  <!-- General Facts -->
+  <div class="general-facts slide-in">
+    <h2>General Facts about Domestic Shorthair Cats</h2>
+    <dl>
+      <dt>Lifespan:</dt>
+      <dd>12-15 years</dd>
+      <dt>Diet:</dt>
+      <dd>Balanced diet with high-quality protein sources. They generally have fewer dietary restrictions compared to
+        purebred cats.</dd>
+      <dt>Behavior:</dt>
+      <dd>Domestic Shorthairs are known for their friendly and adaptable behavior. They are usually active and enjoy
+        playtime but also appreciate a good nap. They are low-maintenance compared to long-haired breeds.</dd>
+    </dl>
+    <img src="https://cdn.shopify.com/s/files/1/0568/0450/7691/files/ANATOMY-DOM-SHORTHAIR_480x480.png?v=1683900845"
+      alt="domestic shorthair cat">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="pfooter"> This page was created by a college student. Images are not mine. This will also not be a published
+      site! </p>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all elements with the class 'slide-in'
+      const slideInElements = document.querySelectorAll('.slide-in');
+
+      // Function to add 'show' class
+      const showElements = () => {
+        slideInElements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            element.classList.add('show');
+          }
+        });
+      };
+
+      // Call the function on page load
+      showElements();
+
+      // Call the function on scroll
+      window.addEventListener('scroll', showElements);
+    });
+  </script>
+</body>

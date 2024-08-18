@@ -1,71 +1,212 @@
-body {
-  font-family: 'Helvetica', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  font-size: 3em;
-  color: #ff6347;
-  text-align: center;
-}
-
-h2 {
-  font-size: 2em;
-  color: #4682b4;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  text-align: center;
-}
-
-#pfooter {
-  font-size: 0.8em;
-  color: #888;
-  text-align: center;
-}
-
-.intro {
-  margin-bottom: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-img {
-  width: 35%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-#cat-caption {
-  margin-top: 10px;
-  font-style: italic;
-  color: #777;
-}
-
-@media (max-width: 768px) {
-  img {
-    width: 80%;
+  body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1 {
-    font-size: 2.5em;
+    font-size: 3em;
+    color: #ff6347;
+    text-align: center;
   }
 
   h2 {
-    font-size: 1.8em;
+    font-size: 2em;
+    color: #4682b4;
+    text-align: center;
+    /* Center-align headings */
   }
 
   p {
-    font-size: 1em;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    /* Center-align text */
   }
-}
+
+  #pfooter {
+    font-size: 0.8em;
+    color: #888;
+    text-align: center;
+  }
+
+  .intro {
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    /* Ensure image is treated as a block element */
+    margin: 20px auto;
+    /* Center the image horizontally */
+  }
+
+  #cat-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    /* Center-align captions */
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 80%;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+
+  .go-back {
+    display: inline-block;
+    font-size: 1em;
+    color: #4682b4;
+    text-decoration: none;
+    margin: 20px 0;
+  }
+
+  .go-back:hover {
+    text-decoration: underline;
+  }
+
+  /* Scrollable image section */
+  .scrollable-images {
+    display: flex;
+    overflow-x: auto;
+    /* Allows horizontal scrolling */
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .scrollable-images img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    /* Prevents shrinking of images */
+  }
+
+  /* Fun facts section */
+  .fun-facts {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .fun-facts h2 {
+    font-size: 1.5em;
+    color: #ff6347;
+  }
+
+  .fun-facts ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  /* General facts section */
+  .general-facts {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .general-facts h2 {
+    font-size: 1.5em;
+    color: #ff6347;
+  }
+
+  .general-facts dl {
+    margin: 0;
+  }
+
+  .general-facts dt {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .general-facts dd {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Slide-in Effect CSS */
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .slide-in.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Optional: Adjust this for different sliding directions */
+  .slide-in-right {
+    transform: translateX(100%);
+  }
+
+  .slide-in-right.show {
+    transform: translateX(0);
+  }
+
+  /* Cats Wrapper Styling */
+  .cats-wrapper {
+    margin: 0 auto;
+    /* Center the wrapper */
+    width: 100%;
+    max-width: 800px;
+    /* Matching width with intro */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Heading Styling inside Cats Wrapper */
+  .cats-wrapper h2 {
+    font-size: 1.8em;
+    color: #4682b4;
+  }
+
+  /* Image Styling inside Cats Wrapper */
+  .cats-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    /* Smaller max width for images */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .cats-wrapper img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }

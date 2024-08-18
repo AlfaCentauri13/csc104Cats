@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <title>Meow</title>
+  <title>Meow!</title>
 </head>
 
 <body>
@@ -13,32 +13,66 @@
   <h1 id="title">MEOW</h1>
 
   <!-- Introduction -->
-  <div class="intro">
+  <div class="intro slide-in">
     <p>Welcome to my cat database.</p>
-    <p>Here you can find information about all the cats I know.</p>
-    <p>This page is updated whenever I can get to it.</p>
+    <p>Here you can find information about all the cats I know so far.</p>
+    <p><strong>Click on the images to be redirected to a detailed page on the cat!!!</strong></p>
   </div>
 
-  <!-- cats -->
-  <h2 id="cat-title">Orange Tabby</h2>
-  <img src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg"
-    alt="A cute cat">
-  <p id="cat-caption">This is a cute cat displaying teeth.</p>
+  <!-- Cats -->
+  <div class="cats-wrapper slide-in">
+    <h2 id="cat-title">Classic Orange Tabby</h2>
+    <a href="orangetabby.html">
+      <img src="https://cdn.britannica.com/70/234870-050-D4D024BB/Orange-colored-cat-yawns-displaying-teeth.jpg"
+        alt="A cute cat">
+    </a>
+    <p id="cat-caption">The classic orange cat</p>
 
-  <h2 id="cat-title">Domestic Shorthair Kitten (Tabby)</h2>
-  <img
-    src="https://www.pasadenastarnews.com/wp-content/uploads/2023/06/PAS-L-COL-PHS-0624-01-1.jpg?fit=620%2C9999px&ssl=1"
-    alt="A cute cat">
-  <p id="cat-caption"> This is another cat </p>
+    <h2 id="cat-title">Domestic Shorthair</h2>
+    <a href="domesticshorthair.html">
+      <img
+        src="https://www.pasadenastarnews.com/wp-content/uploads/2023/06/PAS-L-COL-PHS-0624-01-1.jpg?fit=620%2C9999px"
+        alt="A cute cat">
+    </a>
+    <p id="cat-caption">Orange cat but not orange</p>
 
-  <!-- footer -->
+    <h2 id="cat-title">Persian Longhair</h2>
+    <a href="persianlonghair.html">
+      <img
+        src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcT_5BaekDocJRBYqFvm-4MD4WdzudwUNtUR9uU18wXhYOSD0BES5usmZBkW5mtZOKJf"
+        alt="A cute cat">
+    </a>
+    <p id="cat-caption">Long-haired breed known for their round faces and short muzzles</p>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p id="pfooter"> This page was created by a college student. Images are not mine. </p>
+    <p id="pfooter"> This page was created by a college student. Images are not mine. This will also not be a published
+      site! </p>
   </footer>
-</body>
 
-<script>
-// tbd
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Select all elements with the class 'slide-in'
+      const slideInElements = document.querySelectorAll('.slide-in');
+
+      // Function to add 'show' class
+      const showElements = () => {
+        slideInElements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            element.classList.add('show');
+          }
+        });
+      };
+
+      // Call the function on page load
+      showElements();
+
+      // Call the function on scroll
+      window.addEventListener('scroll', showElements);
+    });
+  </script>
+</body>
 
 </html>
